@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+## VMAF based In-Loop Video Coding for DynamicAdaptive Streaming over HTTP
 
-You can use the [editor on GitHub](https://github.com/inloopvideocoding/inloopvideocoding.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Wilmer Moina-Rivera 
 
-### Markdown
+wilmoiri@alumni.uv.es
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Juan Gutierrez-Aguado
 
-```markdown
-Syntax highlighted code block
+juan.gutierrez@uv.es
 
-# Header 1
-## Header 2
-### Header 3
+Miguel Garcia-Pineda
 
-- Bulleted
-- List
+miguel.garcia-pineda@uv.es
 
-1. Numbered
-2. List
+Computer Science Dept.
 
-**Bold** and _Italic_ and `Code` text
+Universitat de Valencia
 
-[Link](url) and ![Image](src)
-```
+Valencia, Spain
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Abstract
 
-### Jekyll Themes
+>Today, most companies that offer streaming servicesover the Internet use DASH or HLS as protocols to deliver theircontent to users. The use of these protocols has become populardue to the ability to offer the best quality allowed by the networkand end-user devices, thus providing a high quality of experience.In  order  to  create  a  DASH  representation,  the  high  resolutioninput  video  is  split  in  segments  of  equal  duration,  and  eachsegment is encoded at different resolutions. This work presents anew coding scheme able to adapt parameters for each segment toachieve  a  target  quality.  The  video  is  analyzed  only  once  at  lowdimension to reduce the processing time and the parameters canbe  used  to  encode  the  input  video  at  different  resolutions.  Theproposal  has  been  validated  with  two  raw  videos  and  differentsegment sizes, and has been compared with a fixed CRF encodingscheme. Results show that the proposed solution can reduce thesize  of  the  video  maintaining  the  same  quality.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/inloopvideocoding/inloopvideocoding.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Wilmer Moina-Rivera
