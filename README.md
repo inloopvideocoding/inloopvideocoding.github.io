@@ -1,4 +1,4 @@
-## VMAF based In-Loop Video Coding for DynamicAdaptive Streaming over HTTP
+## VMAF based In-Loop Video Coding for Dynamic Adaptive Streaming over HTTP
 
 
 Wilmer Moina-Rivera 
