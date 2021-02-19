@@ -32,13 +32,13 @@
       //Example adding video and source
       video = document.querySelector("#video1");
       source = document.createElement("source");
-      source.src = "http://35.214.46.220/mpd/sintel-1080-3s-crf-27_dash.mpd";
+      source.src = "https://inloopvideocoding.github.io/mpd/sintel-1080-3s-crf-27_dash.mpd";
       source.type = "application/dash+xml";
       player = dashjs.MediaPlayerFactory.create(video, source);
 
       video = document.querySelector("#video2");
       source = document.createElement("source");
-      source.src = "http://35.214.46.220/mpd/sintel-1080-3s-crf-adp_dash.mpd";
+      source.src = "https://inloopvideocoding.github.io/mpd/sintel-1080-3s-crf-adp_dash.mpd";
       source.type = "application/dash+xml";
       player = dashjs.MediaPlayerFactory.create(video, source);
 
