@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Sintel 1 sec.</title>
+  <title>Tearsofsteel 3 sec.</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Test video</title>
@@ -20,7 +20,8 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script src="../js/dash.all.min.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="../css/player.css" />
+  
   <script>
     function init() {
       var player,
@@ -31,13 +32,13 @@
       //Example adding video and source
       video = document.querySelector("#video1");
       source = document.createElement("source");
-      source.src = "http://35.214.46.220/mpd/tos_dash.mpd";
+      source.src = "http://35.214.46.220/mpd/tearsofsteel-1080-3s-crf-27_dash.mpd";
       source.type = "application/dash+xml";
       player = dashjs.MediaPlayerFactory.create(video, source);
 
       video = document.querySelector("#video2");
       source = document.createElement("source");
-      source.src = "http://35.214.46.220/mpd/tos_dash.mpd";
+      source.src = "http://35.214.46.220/mpd/tearsofsteel-1080-3s-crf-27_dash.mpd";
       source.type = "application/dash+xml";
       player = dashjs.MediaPlayerFactory.create(video, source);
 
@@ -46,9 +47,11 @@
     function play_pause() {
       if (video1.paused == true) {
         video1.play(); video2.play();
+        openFullscreen();       
       }
       else {
         video1.pause(); video2.pause();
+        closeFullscreen();
       }
     }
 
@@ -61,51 +64,36 @@
         $el.toggleClass('showFire');
       });
     });
+
+    var elem = document.documentElement;
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+
+    function closeFullscreen() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+      }
+    }
+
   </script>
-
-  <style>
-    video {
-      height: auto;
-      width: 100%;
-      position: relative;
-    }
-
-    .bg-dark {
-      background-color: #000 !important;
-    }
-
-    footer {
-      text-align: center;
-      font-family: sans-serif;
-      color: whitesmoke;
-      width: 100%;
-      bottom: 0;
-      position: fixed;
-    }
-
-    body {
-      font-family: 'Lato', Calibri, Arial, sans-serif;
-    }
-
-    .mytex {
-      font-size: 1.5rem;
-    }
-    a{
-      color: #f7f7f7;
-      font-size: xx-large;
-    }
-    a{
-      color: #f7f7f7;
-      font-size: xx-large;
-    }
-  </style>
 </head>
 
 <body class="bg-dark">
   <div class="container-fluid bg-dark">
     <div class="row align-items-center">
       <div class="col">
-        <a href="../index.html" class="back back-left" title="back to home">&larr;</a>
+        <a href="../index.html" class="back" title="back to home">&larr;</a>
       </div>
       <div class="w-100"></div>
       <div class="col">
@@ -122,8 +110,8 @@
       </div>
     </div>
     <footer class="footer">
-      <div class="container-fluid">
-        <div class="col">
+      <div class="container">
+        <div class="col" style="padding-bottom: 1%"">
           <button id="swapFire" type="button" class="btn btn-outline-secondary btn-lg btn-block mytex"
             data-toggle="button" aria-pressed="false" autocomplete="off" onclick="play_pause()"><span
               class="glyphicon glyphicon-fire"></span>Play</button>
